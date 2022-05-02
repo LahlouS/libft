@@ -25,8 +25,11 @@ static int	ft_count_wrd(char const *s, char c)
 	int	wrdcount;
 	int	i;
 
+	
 	i = 1;
 	wrdcount = 0;
+	if (!s[0])
+		return (wrdcount);
 	while (1)
 	{
 		if ((ft_o(s[i], c) && !ft_o(s[i - 1], c))
@@ -50,7 +53,7 @@ static char	*ft_get_wrd(char const *s, int e)
 		return (NULL);
 	while (++i < e)
 		str[i] = s[i];
-	str[++i] = 0;
+	str[i] = 0;
 	return (str);
 }
 
@@ -83,7 +86,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	nbwrd = ft_count_wrd(s, c);
-	strs = malloc(sizeof(char *) * nbwrd + 1);
+	strs = malloc(sizeof(char *) * (nbwrd + 1));
 	if (!strs)
 		return (NULL);
 	i = -1;

@@ -23,7 +23,7 @@ static int	ft_occurence(char const *set, char c)
 	return (0);
 }
 
-static char	ft_left_trim(char const *s1, char const *set)
+static char	*ft_left_trim(char const *s1, char const *set)
 {
 	while (ft_occurence(set, *s1))
 		s1++;
@@ -49,6 +49,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	p1 = ft_left_trim(s1, set);
 	p2 = ft_right_trim(s1, set);
+	if (p2 - p1 < 0)
+	{
+		str = malloc(sizeof(char) * 1);
+		str[0] = '\0';
+		return (str);
+	}
 	str = malloc(sizeof(char) * (p2 - p1) + 2);
 	if (!str)
 		return (NULL);

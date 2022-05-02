@@ -8,12 +8,12 @@
 
         /*FT_SUBSTR*/
 
-// int main(int ac, char **av)
-// {
-// 	(void) ac;
-// 	printf("%s\n", ft_substr(*(av + 1), 0, 50));
-// 	return (0);
-// }
+int main(int ac, char **av)
+{
+	(void) ac;
+	printf("%s\n", ft_substr(*(av + 1), 1, 1));
+	return (0);
+}
 
         /*FT_STRJOIN*/
 
@@ -27,13 +27,14 @@
 
         /*FT_STRTRIM*/
 
+
 // int main (int ac, char **av)
 // {
 // 	(void)ac;
 //         (void)av;
-//         char *str = "sacha";
-//         char *set = "sch";
-// 	printf("%s\n", ft_strtrim(str, set));
+//         char *str = "    xxx   xxx   xxx";
+//         char *set = " x";
+// 	printf("%p\n", ft_strtrim(str, set));
 // 	return (0);
 // }
 
