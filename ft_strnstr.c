@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slahlou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/02 14:28:53 by slahlou           #+#    #+#             */
+/*   Updated: 2022/05/02 14:29:24 by slahlou          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_o(const char *s1, const char *s2)
@@ -13,6 +25,7 @@ static int	ft_o(const char *s1, const char *s2)
 	}
 	return (1);
 }
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

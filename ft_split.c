@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slahlou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/02 14:14:55 by slahlou           #+#    #+#             */
+/*   Updated: 2022/05/02 14:17:38 by slahlou          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_o(char c1, char c2)
@@ -8,7 +20,7 @@ static int	ft_o(char c1, char c2)
 		return (0);
 }
 
-static 	int	ft_count_wrd(char const *s, char c)
+static int	ft_count_wrd(char const *s, char c)
 {
 	int	wrdcount;
 	int	i;
@@ -17,7 +29,8 @@ static 	int	ft_count_wrd(char const *s, char c)
 	wrdcount = 0;
 	while (1)
 	{
-		if ((ft_o(s[i], c) && !ft_o(s[i - 1], c)) || (!s[i] && !ft_o(s[i - 1], c)))
+		if ((ft_o(s[i], c) && !ft_o(s[i - 1], c))
+			|| (!s[i] && !ft_o(s[i - 1], c)))
 			wrdcount++;
 		if (!s[i])
 			break ;
@@ -69,7 +82,7 @@ char	**ft_split(char const *s, char c)
 	int		nbwrd;
 	int		i;
 
-	nbwrd = ft_count_wrd(s,c);
+	nbwrd = ft_count_wrd(s, c);
 	strs = malloc(sizeof(char *) * nbwrd + 1);
 	if (!strs)
 		return (NULL);

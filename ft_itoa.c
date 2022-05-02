@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slahlou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/02 14:00:43 by slahlou           #+#    #+#             */
+/*   Updated: 2022/05/02 14:02:53 by slahlou          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	ft_nbr_to_buf(unsigned int nb, char *buf, int *index)
 {
 	int		indexcopy;
+
 	indexcopy = *index;
 	if (nb < 10)
 	{
@@ -18,13 +31,13 @@ static void	ft_nbr_to_buf(unsigned int nb, char *buf, int *index)
 	}
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	buf[15];
 	char	*str;
 	int		index;
 	int		i;
-	
+
 	index = 0;
 	i = -1;
 	if (n < 0)
@@ -34,7 +47,7 @@ char *ft_itoa(int n)
 	if (n < 0)
 	{
 		buf[index] = '-';
-		buf[++index] = '\0'; 
+		buf[++index] = '\0';
 	}
 	str = malloc(sizeof(char) * (index + 1));
 	while (index >= 0)
@@ -42,4 +55,3 @@ char *ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
-
