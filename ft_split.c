@@ -6,7 +6,7 @@
 /*   By: slahlou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 14:14:55 by slahlou           #+#    #+#             */
-/*   Updated: 2022/05/02 14:17:38 by slahlou          ###   ########.fr       */
+/*   Updated: 2022/05/03 11:16:01 by slahlou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ static int	ft_count_wrd(char const *s, char c)
 	int	wrdcount;
 	int	i;
 
-	
 	i = 1;
 	wrdcount = 0;
 	if (!s[0])
